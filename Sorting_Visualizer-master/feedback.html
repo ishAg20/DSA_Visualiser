@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./css/styles_feedback.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <h1 class="logo">Feedback</h1>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="feedback-form">
+        <h1>Feedback Form</h1>
+        <form action="#" method="post" id="feedback-form">
+          <div class="form-group">
+            <label for="rating">Rate your experience (1 to 5):</label>
+            <br />
+            <label
+              ><input type="radio" id="rating1" name="rating" value="1" />
+              1</label
+            >
+            <label
+              ><input type="radio" id="rating2" name="rating" value="2" />
+              2</label
+            >
+            <label
+              ><input type="radio" id="rating3" name="rating" value="3" />
+              3</label
+            >
+            <label
+              ><input type="radio" id="rating4" name="rating" value="4" />
+              4</label
+            >
+            <label
+              ><input type="radio" id="rating5" name="rating" value="5" />
+              5</label
+            >
+          </div>
+          <div class="form-group">
+            <label for="features"
+              >Features you would like us to implement:</label
+            >
+            <br />
+            <textarea
+              id="features"
+              name="features"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="source">How did you hear about us?</label>
+            <br />
+            <select id="source" name="source">
+              <option value="friend">From a friend</option>
+              <option value="search">Search engine</option>
+              <option value="social">Social media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tried-features">Which features did you try?</label>
+            <br />
+            <label
+              ><input
+                type="checkbox"
+                id="sorting"
+                name="sorting"
+                value="sorting"
+              />
+              Sorting Algorithms</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="searching"
+                name="searching"
+                value="searching"
+              />
+              Searching Algorithms</label
+            >
+          </div>
+          <button type="button" onclick="submitFeedback()">
+            Submit Feedback
+          </button>
+        </form>
+        <br />
+        <br />
+        <a href="mainCode.html" class="inputs">Back to Home</a>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    function submitFeedback() {
+      alert("Feedback submitted successfully!");
+      document.getElementById("feedback-form").reset();
+    }
+    var features = document.getElementById("features");
+    features.focus();
+  </script>
+</html>

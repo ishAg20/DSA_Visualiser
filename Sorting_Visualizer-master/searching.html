@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSA: Searching Visualiser</title>
+    <link rel="stylesheet" href="./css/style2.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header_right">
+          <p class="nav-heading2">BINARY SEARCH VISUALIZER</p>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="info">
+        <h3>TIME COMPLEXITY</h3>
+        <div class="complexity" id="time_complex">
+          <div class="info_sub">
+            <p class="time_case">Worst case:</p>
+            <p id="Time_Worst">O(log N)</p>
+          </div>
+          <div class="info_sub">
+            <p class="time_case">Average case:</p>
+            <p id="Time_Average">O(log N)</p>
+          </div>
+          <div class="info_sub">
+            <p class="time_case">Best case:</p>
+            <p id="Time_Best">O(1)</p>
+          </div>
+        </div>
+      </div>
+      <div id="array_container2">
+        <div id="array"></div>
+        <br /><br />
+
+        <div style="text-align: center">
+          <label for="fname"> Number to be Searched: </label>
+          <input type="text" id="fname" name="fname" class="search_input" />
+          <br /><br />
+          <button id="btn" class="btn_search" onclick="BinarySearch()">
+            Search
+          </button>
+          <br />
+          <br />
+          <div id="text"></div>
+        </div>
+      </div>
+      <div class="info">
+        <h3>SPACE COMPLEXITY</h3>
+        <div class="complexity" id="Space_Complexity_Types_Container">
+          <div class="info_sub">
+            <p class="time_case">Worst case:</p>
+            <p id="Space_Worst">O(1)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="images">
+      <img
+        src="search1.webp"
+        id="image1"
+        class="image"
+        width="400"
+        height="317"
+        onclick="moveToTop(this)"
+      />
+      <img
+        src="search2.jpeg"
+        id="image2"
+        class="image"
+        width="480"
+        height="411"
+        onclick="moveToTop(this)"
+      />
+      <img
+        src="search3.png"
+        id="image3"
+        class="image"
+        width="550"
+        height="403"
+        onclick="moveToTop(this)"
+      />
+    </div>
+
+    <a href="mainCode.html" class="inputs" id="back1">Back to Home</a>
+    <script src="./scripts/binarysearch.js"></script>
+    <script>
+      window.onload = generatearray;
+      var topIndex = 2;
+
+      function moveToTop(picture) {
+        picture.style.zIndex = ++topIndex;
+      }
+    </script>
+  </body>
+</html>
